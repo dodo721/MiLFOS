@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<meta http-equiv="x-ua-compatible" content="ie=edge">
+		<meta name="theme-color" content="#770f00">
+		<title>MiLFOS</title>
+		<link rel="shortcut icon" href="/favicon-32.png" />
+
+		<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+		<link rel="stylesheet" type="text/css" href="/build/style/main.css" >
+		
+	</head>
+	<body>
+		
+		<div id="mainDiv">
+		</div>
+		
+		<!-- everything comes via webpack -->
+		<script>
+			// Insert bundle[-debug].js - but allow dynamic test/production build switch.
+			// Default to debug build on test and local servers.
+			window.isDebug = window.location.hostname.match(/^local/) || window.location.hostname.match(/^test/) || window.location.hostname.match(/^stage/);
+			
+			// Has the user specified debug/production build with a URL param?
+			const debugParam = window.location.search.match(/debug=(\w+)/i);
+			if (debugParam && debugParam[1]) {
+				// Require an exact match to change from default
+				if (debugParam[1] === 'false') isDebug = false;
+				else if (debugParam[1] === 'true') isDebug = true;
+			}
+			
+			let filename = isDebug ? 'bundle-debug.js' : 'bundle.js';
+			// The cachebuster comes from version.properties info on the last git commit. That is made by bob when building the java code.
+			// so run `bob` to update it outside of a normal build.
+			document.write('<script src="/build/js/' + filename + '"/><\/script>');
+		</script>
+	</body>
+</html>
