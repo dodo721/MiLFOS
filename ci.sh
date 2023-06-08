@@ -1,8 +1,8 @@
 #!/bin/bash
 
-mkdir logs
-dt=$(date '+%d-%m-%Y_%H:%M:%S')
-file=logs/cilog-$dt.txt
+cd ~/MiLFOS/
+mkdir ./logs
+file=logs/cilog.txt
 touch $file
 echo ">>>>>>>>>>>> GIT PULL" >> $file
 git pull >> $file

@@ -4,8 +4,8 @@
   "main": "index.js",
   "scripts": {
     "compile": "webpack --config $PWD/webpack.config.js --progress --color && ./gitstamp.sh",
-    "compile-watch": "webpack --config $PWD/webpack.config.js --progress --color --watch",
-    "compile-watch-fast": "NO_PROD=true webpack --config $PWD/webpack.config.js --progress --color --watch",
+    "compile-watch": "node ci.js",
+    "compile-watch-fast": "NO_PROD=true node ci.js",
     "type-check": "tsc --noEmit",
     "test": "npx playwright test"
   },
