@@ -1,52 +1,147 @@
-asset js/bundle-debug.js 2.43 MiB [compared for emit] (name: main) 1 related asset
-asset style/main.css 489 bytes [emitted] (name: main) 1 related asset
-Entrypoint main 2.43 MiB (2.44 MiB) = style/main.css 489 bytes js/bundle-debug.js 2.43 MiB 2 auxiliary assets
-runtime modules 2.05 KiB 9 modules
-orphan modules 3.34 KiB [orphan] 3 modules
-modules by path ./node_modules/core-js/modules/*.js 466 KiB 470 modules
-modules by path ./node_modules/core-js/internals/*.js 269 KiB 301 modules
-modules by path ./src/ 578 bytes (javascript) 21 bytes (css/mini-extract) 4 modules
-modules by path ./node_modules/scheduler/ 32.4 KiB 4 modules
-modules by path ./node_modules/prop-types/ 4.15 KiB 3 modules
-modules by path ./node_modules/react/ 59.4 KiB
-  ./node_modules/react/index.js 190 bytes [built] [code generated]
-  ./node_modules/react/cjs/react.development.js 59.2 KiB [built] [code generated]
-modules by path ./node_modules/react-dom/ 840 KiB
-  ./node_modules/react-dom/index.js 1.33 KiB [built] [code generated]
-  ./node_modules/react-dom/cjs/react-dom.development.js 839 KiB [built] [code generated]
-+ 4 modules
-webpack 5.86.0 compiled successfully in 18444 ms
+assets by status 489 bytes [cached] 1 asset
+asset js/bundle-debug.js 3.16 MiB [emitted] (name: main) 1 related asset
+Entrypoint main 3.16 MiB (3.23 MiB) = style/main.css 489 bytes js/bundle-debug.js 3.16 MiB 2 auxiliary assets
+cached modules 1.93 MiB (javascript) 21 bytes (css/mini-extract) [cached] 789 modules
+runtime modules 2.25 KiB 6 modules
+modules by layer 648 KiB
+  modules by path ./node_modules/ 647 KiB 132 modules
+  modules by path ./lib/ 45 bytes
+    ./lib/conn-pool.js (ignored) 15 bytes [built] [code generated]
+    ./lib/client/http-tracker.js (ignored) 15 bytes [built] [code generated]
+    ./lib/client/udp-tracker.js (ignored) 15 bytes [built] [code generated]
+  modules by path ./*.js (ignored) 45 bytes
+    ./get-files.js (ignored) 15 bytes [built] [code generated]
+    ./server.js (ignored) 15 bytes [built] [code generated]
+    ./common-node.js (ignored) 15 bytes [built] [code generated]
+  + 14 modules
 
-asset js/bundle.js 446 KiB [compared for emit] [minimized] [big] (name: main) 2 related assets
-asset style/main.css 58 bytes [emitted] (name: main) 1 related asset
-Entrypoint main [big] 446 KiB (1.94 MiB) = style/main.css 58 bytes js/bundle.js 446 KiB 2 auxiliary assets
-orphan modules 3.53 KiB (javascript) 937 bytes (runtime) [orphan] 9 modules
-runtime modules 884 bytes 4 modules
-modules by path ./node_modules/core-js/modules/*.js 466 KiB 470 modules
-modules by path ./node_modules/core-js/internals/*.js 269 KiB 301 modules
-modules by path ./src/ 528 bytes (javascript) 21 bytes (css/mini-extract) 2 modules
-modules by path ./node_modules/react/ 6.7 KiB 2 modules
-modules by path ./node_modules/react-dom/ 117 KiB
-  ./node_modules/react-dom/index.js 1.33 KiB [built] [code generated]
-  ./node_modules/react-dom/cjs/react-dom.production.min.js 116 KiB [built] [code generated]
-modules by path ./node_modules/scheduler/ 5.12 KiB
-  ./node_modules/scheduler/index.js 198 bytes [built] [code generated]
-  ./node_modules/scheduler/cjs/scheduler.production.min.js 4.92 KiB [built] [code generated]
-+ 4 modules
+ERROR in ./node_modules/k-rpc-socket/index.js 1:12-28
+Module not found: Error: Can't resolve 'dgram' in '/home/oem/MiLFOS/node_modules/k-rpc-socket'
+ @ ./node_modules/k-rpc/index.js 1:13-36
+ @ ./node_modules/bittorrent-dht/client.js 5:0-24 31:29-33
+ @ ./node_modules/bittorrent-dht/index.js 2:0-56 2:0-56 2:0-56
+ @ ./node_modules/torrent-discovery/index.js 3:0-46 58:22-25 75:37-40
+ @ ./node_modules/webtorrent/lib/torrent.js 12:0-41 342:25-34
+ @ ./node_modules/webtorrent/index.js 16:0-38 212:29-36 264:24-31
+ @ ./src/js/components/MainDiv.jsx 2:0-36
+ @ ./src/js/app.jsx 4:0-43 11:50-57
 
-WARNING in asset size limit: The following asset(s) exceed the recommended size limit (244 KiB).
-This can impact web performance.
-Assets: 
-  js/bundle.js (446 KiB)
+ERROR in ./node_modules/k-rpc-socket/index.js 3:11-30
+Module not found: Error: Can't resolve 'net' in '/home/oem/MiLFOS/node_modules/k-rpc-socket'
+ @ ./node_modules/k-rpc/index.js 1:13-36
+ @ ./node_modules/bittorrent-dht/client.js 5:0-24 31:29-33
+ @ ./node_modules/bittorrent-dht/index.js 2:0-56 2:0-56 2:0-56
+ @ ./node_modules/torrent-discovery/index.js 3:0-46 58:22-25 75:37-40
+ @ ./node_modules/webtorrent/lib/torrent.js 12:0-41 342:25-34
+ @ ./node_modules/webtorrent/index.js 16:0-38 212:29-36 264:24-31
+ @ ./src/js/components/MainDiv.jsx 2:0-36
+ @ ./src/js/app.jsx 4:0-43 11:50-57
 
-WARNING in entrypoint size limit: The following entrypoint(s) combined asset size exceeds the recommended limit (244 KiB). This can impact web performance.
-Entrypoints:
-  main (446 KiB)
-      style/main.css
-      js/bundle.js
+ERROR in ./node_modules/k-rpc-socket/index.js 4:10-24
+Module not found: Error: Can't resolve 'dns' in '/home/oem/MiLFOS/node_modules/k-rpc-socket'
+ @ ./node_modules/k-rpc/index.js 1:13-36
+ @ ./node_modules/bittorrent-dht/client.js 5:0-24 31:29-33
+ @ ./node_modules/bittorrent-dht/index.js 2:0-56 2:0-56 2:0-56
+ @ ./node_modules/torrent-discovery/index.js 3:0-46 58:22-25 75:37-40
+ @ ./node_modules/webtorrent/lib/torrent.js 12:0-41 342:25-34
+ @ ./node_modules/webtorrent/index.js 16:0-38 212:29-36 264:24-31
+ @ ./src/js/components/MainDiv.jsx 2:0-36
+ @ ./src/js/app.jsx 4:0-43 11:50-57
 
-WARNING in webpack performance recommendations: 
-You can limit the size of your bundles by using import() or require.ensure to lazy load some parts of your application.
-For more info visit https://webpack.js.org/guides/code-splitting/
+ERROR in ./node_modules/bittorrent-dht/client.js 10:0-27
+Module not found: Error: Can't resolve 'crypto' in '/home/oem/MiLFOS/node_modules/bittorrent-dht'
 
-webpack 5.86.0 compiled with 3 warnings in 29353 ms
+BREAKING CHANGE: webpack < 5 used to include polyfills for node.js core modules by default.
+This is no longer the case. Verify if you need this module and configure a polyfill for it.
+
+If you want to include a polyfill, you need to:
+	- add a fallback 'resolve.fallback: { "crypto": require.resolve("crypto-browserify") }'
+	- install 'crypto-browserify'
+If you don't want to include a polyfill, you can use an empty module like this:
+	resolve.fallback: { "crypto": false }
+ @ ./node_modules/bittorrent-dht/index.js 2:0-56 2:0-56 2:0-56
+ @ ./node_modules/torrent-discovery/index.js 3:0-46 58:22-25 75:37-40
+ @ ./node_modules/webtorrent/lib/torrent.js 12:0-41 342:25-34
+ @ ./node_modules/webtorrent/index.js 16:0-38 212:29-36 264:24-31
+ @ ./src/js/components/MainDiv.jsx 2:0-36
+ @ ./src/js/app.jsx 4:0-43 11:50-57
+
+ERROR in ./node_modules/bittorrent-protocol/index.js 4:0-27
+Module not found: Error: Can't resolve 'crypto' in '/home/oem/MiLFOS/node_modules/bittorrent-protocol'
+
+BREAKING CHANGE: webpack < 5 used to include polyfills for node.js core modules by default.
+This is no longer the case. Verify if you need this module and configure a polyfill for it.
+
+If you want to include a polyfill, you need to:
+	- add a fallback 'resolve.fallback: { "crypto": require.resolve("crypto-browserify") }'
+	- install 'crypto-browserify'
+If you don't want to include a polyfill, you can use an empty module like this:
+	resolve.fallback: { "crypto": false }
+ @ ./node_modules/webtorrent/lib/peer.js 5:0-38 94:33-37
+ @ ./node_modules/webtorrent/index.js 86:6-29
+ @ ./src/js/components/MainDiv.jsx 2:0-36
+ @ ./src/js/app.jsx 4:0-43 11:50-57
+
+ERROR in ./node_modules/create-torrent/index.js 5:0-27
+Module not found: Error: Can't resolve 'path' in '/home/oem/MiLFOS/node_modules/create-torrent'
+
+BREAKING CHANGE: webpack < 5 used to include polyfills for node.js core modules by default.
+This is no longer the case. Verify if you need this module and configure a polyfill for it.
+
+If you want to include a polyfill, you need to:
+	- add a fallback 'resolve.fallback: { "path": require.resolve("path-browserify") }'
+	- install 'path-browserify'
+If you don't want to include a polyfill, you can use an empty module like this:
+	resolve.fallback: { "path": false }
+ @ ./node_modules/webtorrent/index.js 4:0-58 349:6-16 355:8-21
+ @ ./src/js/components/MainDiv.jsx 2:0-36
+ @ ./src/js/app.jsx 4:0-43 11:50-57
+
+ERROR in ./node_modules/parse-torrent/index.js 7:0-23
+Module not found: Error: Can't resolve 'path' in '/home/oem/MiLFOS/node_modules/parse-torrent'
+
+BREAKING CHANGE: webpack < 5 used to include polyfills for node.js core modules by default.
+This is no longer the case. Verify if you need this module and configure a polyfill for it.
+
+If you want to include a polyfill, you need to:
+	- add a fallback 'resolve.fallback: { "path": require.resolve("path-browserify") }'
+	- install 'path-browserify'
+If you don't want to include a polyfill, you can use an empty module like this:
+	resolve.fallback: { "path": false }
+ @ ./node_modules/webtorrent/index.js 9:0-40 217:27-39
+ @ ./src/js/components/MainDiv.jsx 2:0-36
+ @ ./src/js/app.jsx 4:0-43 11:50-57
+
+ERROR in ./node_modules/webtorrent/index.js 3:0-23
+Module not found: Error: Can't resolve 'path' in '/home/oem/MiLFOS/node_modules/webtorrent'
+
+BREAKING CHANGE: webpack < 5 used to include polyfills for node.js core modules by default.
+This is no longer the case. Verify if you need this module and configure a polyfill for it.
+
+If you want to include a polyfill, you need to:
+	- add a fallback 'resolve.fallback: { "path": require.resolve("path-browserify") }'
+	- install 'path-browserify'
+If you don't want to include a polyfill, you can use an empty module like this:
+	resolve.fallback: { "path": false }
+ @ ./src/js/components/MainDiv.jsx 2:0-36
+ @ ./src/js/app.jsx 4:0-43 11:50-57
+
+ERROR in ./node_modules/webtorrent/lib/torrent.js 5:0-23
+Module not found: Error: Can't resolve 'path' in '/home/oem/MiLFOS/node_modules/webtorrent/lib'
+
+BREAKING CHANGE: webpack < 5 used to include polyfills for node.js core modules by default.
+This is no longer the case. Verify if you need this module and configure a polyfill for it.
+
+If you want to include a polyfill, you need to:
+	- add a fallback 'resolve.fallback: { "path": require.resolve("path-browserify") }'
+	- install 'path-browserify'
+If you don't want to include a polyfill, you can use an empty module like this:
+	resolve.fallback: { "path": false }
+ @ ./node_modules/webtorrent/index.js 16:0-38 212:29-36 264:24-31
+ @ ./src/js/components/MainDiv.jsx 2:0-36
+ @ ./src/js/app.jsx 4:0-43 11:50-57
+
+9 errors have detailed information that is not shown.
+Use 'stats.errorDetails: true' resp. '--stats-error-details' to show it.
+
+webpack 5.86.0 compiled with 9 errors in 1699 ms

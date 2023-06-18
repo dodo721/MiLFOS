@@ -11,6 +11,16 @@ map $sent_http_content_type $expires {
 server {
 	listen   80; ## listen for ipv4; this line is default and implied
 
+	listen               443;
+	ssl_protocols TLSv1.2 TLSv1.3;
+	ssl_ciphers ECDHE-ECDSA-AES128-GCM-SHA256:ECDHE-RSA-AES128-GCM-SHA256:ECDHE-ECDSA-AES256-GCM-SHA384:ECDHE-RSA-AES256-GCM-SHA384:ECDHE-ECDSA-CHACHA20-POLY1305:ECDHE-RSA-CHACHA20-POLY1305:DHE-RSA-AES128-GCM-SHA256:DHE-RSA-AES256-GCM-SHA384;
+	ssl_prefer_server_ciphers off;
+	ssl_certificate      /home/oem/MiLFOS/local.milfos.com.pem;
+	ssl_certificate_key  /home/oem/MiLFOS/local.milfos.com-key.pem;
+	# server_name          local.website.dev;
+
+	add_header X-Frame-Options SAMEORIGIN always;
+
 	root /home/oem/MiLFOS/web;
 	index index.html;
 
@@ -22,6 +32,13 @@ server {
 		try_files $uri $uri/ index;
 		add_header 'Access-Control-Allow-Origin' "$http_origin";
 		add_header 'Access-Control-Allow-Credentials' 'true';
-		add_header 'Cache-Control' 'no-cache';
+		#add_header 'Cache-Control' 'no-cache';
+	}
+
+	location /search {
+		proxy_pass		http://localhost:3000;
+		proxy_set_header	X-Real-IP $remote_addr;
+		proxy_set_header	X-Forwarded-For $proxy_add_x_forwarded_for;
+		proxy_set_header	Host $http_host;
 	}
 }

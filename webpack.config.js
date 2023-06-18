@@ -7,6 +7,7 @@ Keep this copy in sync with the others - if the same file can't be used for all 
 const webpack = require('webpack');
 const path = require('path');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+//const NodePolyfillPlugin = require('node-polyfill-webpack-plugin');
 // Needed IF you want to run git commands & get current branch
 const { execSync } = require('child_process');
 
@@ -18,14 +19,14 @@ if (head.match(/(gl-)?release-.*/)) RELEASE_BRANCH = JSON.stringify(head);
 
 const baseConfig = {
     // NB When editing keep the "our code" entry point last in this list - makeConfig override depends on this position.
-    entry: ['core-js', './src/js/app.jsx'],
+    entry: ['core-js', './websrc/js/app.jsx'],
     output: {
         path: path.resolve(__dirname, "web/build"), // NB: this should include js and css outputs
         // filename: is left undefined and filled in by makeConfig
     },
     devtool: 'source-map',
     resolve: {
-        extensions: ['.ts', '.tsx', '.js', '.jsx'],
+        extensions: ['.js', '.jsx'],
         symlinks: false,
         alias: {
             querystring: 'querystring-es3',
@@ -34,28 +35,6 @@ const baseConfig = {
     },
     module: {
         rules: [
-            {	// Typescript
-                test: /\.tsx?$/,
-                loader: 'babel-loader',
-                exclude: /node_modules/,
-                options: {
-                    presets: [
-                        ['@babel/preset-typescript', { targets: { ie: '11' }, loose: true }],
-                        ['@babel/preset-env', { targets: { ie: '11' }, loose: true }],
-                        '@babel/react'
-                    ],
-                    plugins: [
-                        '@babel/plugin-transform-typescript',
-                        '@babel/plugin-proposal-object-rest-spread',
-                        '@babel/plugin-transform-runtime',
-                        'babel-plugin-const-enum',
-                        // loose: true specified to silence warnings about mismatch with preset-env loose setting
-                        ['@babel/plugin-proposal-class-properties', { loose: true }],
-                        ['@babel/plugin-proposal-private-methods', { loose: true }],
-                        ['@babel/plugin-proposal-private-property-in-object', { loose: true }]
-                    ]
-                }
-            },
             {	// .js or .jsx
                 test: /.jsx?$/,
                 loader: 'babel-loader',
@@ -83,6 +62,7 @@ const baseConfig = {
     },
     plugins: [
         new MiniCssExtractPlugin({ filename: 'style/main.css' }),
+        //new NodePolyfillPlugin(),
         new webpack.DefinePlugin({
             'process.env': {
                 RELEASE_BRANCH,
