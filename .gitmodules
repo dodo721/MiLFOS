@@ -1,0 +1,3 @@
+[submodule "server/torrent-search-api"]
+	path = server/torrent-search-api
+	url = git@github.com:dodo721/torrent-search-api.git
